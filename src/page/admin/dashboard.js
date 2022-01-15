@@ -3,7 +3,8 @@ import AdminHeader from "../../compoment/adminHeader";
 const Dashboard = {
     render() {
         return /* html */`
-            ${AdminHeader.render()}`;
+            ${AdminHeader.render()}
+            `;
     },
 };
 export default Dashboard;

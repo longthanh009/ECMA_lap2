@@ -5,6 +5,8 @@ import Login from "./page/login";
 import Signup from "./page/signup";
 import Dashboard from "./page/admin/dashboard";
 import Add from "./page/admin/news/add";
+import NewsHome from "./page/admin/news";
+import Edit from "./page/admin/news/edit";
 
 const router = new Navigo("/", { linksSelector: "a" });
 const print = (content) => {
@@ -29,15 +31,15 @@ router.on({
     "/admin/dashboard": () => {
         print(Dashboard.render());
     },
-    // "/admin/news": () => {
-    //     print("Product page");
-    // },
+    "/admin/news": () => {
+        print(NewsHome.render());
+    },
     "/admin/news/add": () => {
         print(Add.render());
     },
-    // "/admin/news/:id/edit": () => {
-    //     print("Product page");
-    // },
+    "/admin/news/:id/edit": () => {
+        print(Edit.render());
+    },
 });
 router.notFound(() => print("Not found in"));
 router.resolve();

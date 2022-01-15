@@ -1,92 +1,58 @@
+import AdminHeader from "../../../compoment/adminHeader";
+
 const Edit = {
     render() {
         return /* html */`
-        <div class="mt-5 md:mt-0 md:col-span-2">
-            <form action="#" method="POST">
-                <div class="shadow overflow-hidden sm:rounded-md">
-                <div class="px-4 py-5 bg-white sm:p-6">
-                    <div class="grid grid-cols-6 gap-6">
-                    <div class="col-span-6 sm:col-span-3">
-                        <label for="first-name"
-                        class="block text-sm font-medium text-gray-700">First name</label>
-                        <input type="text" name="first-name" id="first-name"
-                        autocomplete="given-name"
-                        class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
-                    </div>
-
-                    <div class="col-span-6 sm:col-span-3">
-                        <label for="last-name"
-                        class="block text-sm font-medium text-gray-700">Last name</label>
-                        <input type="text" name="last-name" id="last-name"
-                        autocomplete="family-name"
-                        class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
-                    </div>
-
-                    <div class="col-span-6 sm:col-span-4">
-                        <label for="email-address"
-                        class="block text-sm font-medium text-gray-700">Email
-                        address</label>
-                        <input type="text" name="email-address" id="email-address"
-                        autocomplete="email"
-                        class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
-                    </div>
-
-                    <div class="col-span-6 sm:col-span-3">
-                        <label for="country"
-                        class="block text-sm font-medium text-gray-700">Country</label>
-                        <select id="country" name="country" autocomplete="country-name"
-                        class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
-                        <option>United States</option>
-                        <option>Canada</option>
-                        <option>Mexico</option>
-                        </select>
-                    </div>
-
-                    <div class="col-span-6">
-                        <label for="street-address"
-                        class="block text-sm font-medium text-gray-700">Street
-                        address</label>
-                        <input type="text" name="street-address" id="street-address"
-                        autocomplete="street-address"
-                        class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
-                    </div>
-
-                    <div class="col-span-6 sm:col-span-6 lg:col-span-2">
-                        <label for="city"
-                        class="block text-sm font-medium text-gray-700">City</label>
-                        <input type="text" name="city" id="city"
-                        autocomplete="address-level2"
-                        class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
-                    </div>
-
-                    <div class="col-span-6 sm:col-span-3 lg:col-span-2">
-                        <label for="region"
-                        class="block text-sm font-medium text-gray-700">State /
-                        Province</label>
-                        <input type="text" name="region" id="region"
-                        autocomplete="address-level1"
-                        class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
-                    </div>
-
-                    <div class="col-span-6 sm:col-span-3 lg:col-span-2">
-                        <label for="postal-code"
-                        class="block text-sm font-medium text-gray-700">ZIP / Postal
-                        code</label>
-                        <input type="text" name="postal-code" id="postal-code"
-                        autocomplete="postal-code"
-                        class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
-                    </div>
-                    </div>
-                </div>
-                <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
-                    <button type="submit"
-                    class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                    Save
-                    </button>
-                </div>
-                </div>
-            </form>
+    ${AdminHeader.render()}
+    <div class="mt-5 md:mt-0 md:col-span-2">
+        <div class=" flex items-center justify-between pb-6 mt-10">
+            <div>
+                <h2 class="text-gray-600 font-semibold">Chỉnh sủa bài viết</h2>
             </div>
+            <div class="lg:ml-40 ml-10 space-x-8">
+                    <a href="/admin/news">
+                        <button class="bg-indigo-600 px-4 py-2 rounded-md text-white font-semibold tracking-wide cursor-pointer">Back</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <form action="" method="post" class ="mb-12">
+            <div class="md:flex items-center mt-12">
+                <div class="w-full md:w-1/2 flex flex-col">
+                <label class="font-semibold leading-none">ID</label>
+                <input type="text"
+                    class="leading-none text-gray-900 p-3 focus:outline-none focus:border-blue-700 mt-4 bg-gray-100 border rounded border-gray-200" />
+                </div>
+                <div class="w-full md:w-1/2 flex flex-col md:ml-6 md:mt-0 mt-4">
+                <label class="font-semibold leading-none">Title</label>
+                <input type="email"
+                    class="leading-none text-gray-900 p-3 focus:outline-none focus:border-blue-700 mt-4 bg-gray-100 border rounded border-gray-200" />
+                </div>
+            </div>
+            <div class="md:flex items-center mt-8">
+                <div class="w-full flex flex-col">
+                <label class="font-semibold leading-none">Image</label>
+                <input type="file"
+                    class="leading-none text-gray-900 p-3 focus:outline-none focus:border-blue-700 mt-4 bg-gray-100 border rounded border-gray-200" />
+                </div>
+
+            </div>
+            <div>
+                <div class="w-full flex flex-col mt-8">
+                <label class="font-semibold leading-none">Description</label>
+                <textarea type="text"
+                    class="h-40 text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-blue-700 mt-4 bg-gray-100 border rounded border-gray-200"></textarea>
+                </div>
+            </div>
+            <div class="flex items-center justify-center w-full">
+                <button
+                class="mt-9 font-semibold leading-none text-white py-4 px-10 bg-blue-700 rounded hover:bg-blue-600 focus:ring-2 focus:ring-offset-2 focus:ring-blue-700 focus:outline-none">
+                Creat
+                </button>
+            </div>
+        </form>
+        </div>
         `;
     },
 };
